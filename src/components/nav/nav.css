@@ -1,0 +1,33 @@
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1b3764;
+  opacity: 0.95;
+  text-align: center;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar {
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  top: 19px;
+}
+
+.link:hover {
+  background-color: #234781;
+}
+a.active {
+  background-color: #234781;
+}

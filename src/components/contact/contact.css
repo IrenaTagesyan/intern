@@ -1,0 +1,146 @@
+.contacts_contanier {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  align-items: center;
+  justify-content: space-around;
+  color: #1b3764;
+}
+
+.contact_imputs {
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+}
+.contacts {
+  text-align: center;
+  width: 40%;
+  position: relative;
+  top: 15px;
+}
+h1 {
+  margin: 5px 0px;
+}
+
+.phone_data,
+.mail_data,
+.direction_data {
+  margin: 0;
+  padding: 0;
+  color: #969aa0;
+}
+.mail_data {
+  position: relative;
+  left: 45px;
+  bottom: 20px;
+}
+.phone_data {
+  position: relative;
+  left: 5px;
+  bottom: 20px;
+}
+.direction_data {
+  position: relative;
+  left: 90px;
+  bottom: 20px;
+}
+.contact_p {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  padding: 0px 30px;
+  position: relative;
+  bottom: 10px;
+  right: 20px;
+  font-weight: bold;
+}
+.visit,
+.mail,
+.call {
+  margin: 5px;
+}
+.visit p {
+  margin: 0;
+}
+.mail p {
+  margin: 0;
+}
+.call p {
+  margin: 0;
+}
+.name,
+.email,
+.phone,
+.message {
+  color: #969aa0;
+}
+
+.phone::before {
+  content: url("./svg/phone.svg");
+  margin: 5px;
+}
+.message::before {
+  content: url("./svg/message.svg");
+  margin: 5px;
+}
+.email::before {
+  content: url("./svg/mail_input.svg");
+  margin: 5px;
+}
+.name::before {
+  content: url("./svg/user.svg");
+  margin: 5px;
+}
+#name,
+#email {
+  height: 40px;
+  width: 45%;
+  border: 1px solid #dce1e9;
+  border-radius: 5px;
+}
+#phone {
+  height: 40px;
+  width: 90%;
+  border: 1px solid #dce1e9;
+  margin: 5px;
+  border-radius: 5px;
+}
+#message {
+  border: 1px solid #dce1e9;
+  width: 90%;
+  height: 100px;
+  margin: 5px;
+  resize: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.input_div {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+.label_div {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+.send {
+  background: #ffca42;
+  border: 0;
+  width: 90%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 786px) {
+  .contacts_contanier {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contacts {
+    width: 90%;
+  }
+  .contact_imputs {
+    width: 90%;
+  }
+}

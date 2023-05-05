@@ -1,0 +1,50 @@
+.shop_main {
+  display: flex;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 90vh;
+  border-right: 3px solid #dce1e9;
+  border-bottom: 3px solid #dce1e9;
+}
+.btns button,
+.btn {
+  height: 60px;
+  width: 95%;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #1b3764;
+  color: white;
+  border-radius: 5px;
+}
+.btns .sort_btn {
+  background-color: #ffca42;
+  color: #234781;
+}
+.btns .sort_btn:hover {
+  background-color: yellow;
+}
+.btns button:hover {
+  background-color: #3060ad;
+}
+.books {
+  height: 90vh;
+  width: 80%;
+}
+.books div {
+  margin: 5px;
+}
+.card-img-top {
+  height: 30vh;
+  object-fit: contain;
+}
+.row {
+  justify-content: space-around;
+}

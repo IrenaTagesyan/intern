@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa+One&family=Cookie&family=Sigmar&display=swap");
+
+.slider {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.image {
+  height: 40vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #1b3764;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #1b3764;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.active {
+  opacity: 1;
+  height: 40vh;
+  width: 100%;
+}
+.home_ul li {
+  height: 50px;
+}
+.link_home {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: #234781;
+  height: 50px;
+  padding: 10px;
+}
+.link:hover {
+  background-color: #234781;
+  border-radius: 5px;
+}
+.home_ul {
+  width: 200px;
+  height: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #ffca42;
+  text-align: center;
+}
+.home_ul:hover .link_home {
+  background-color: yellow;
+  border-radius: 5px;
+}
+.goshop {
+  width: 20%;
+  position: relative;
+  top: 200px;
+}
+.p_div {
+  width: 80%;
+  margin: 10px;
+  height: 40vh;
+  font-size: 20px;
+  text-align: center;
+  color: #1b3764;
+}
+.home_main {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 800px) {
+  .home_main {
+    flex-wrap: wrap;
+  }
+  .p_div {
+    width: 100%;
+    height: 50vh;
+  }
+  .goshop {
+    width: 100%;
+    height: 25vh;
+    top: 0;
+  }
+  .home_ul {
+    position: relative;
+    left: 32%;
+    top: 68%;
+  }
+}

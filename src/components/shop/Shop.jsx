@@ -2,7 +2,7 @@ import { useState } from "react";
 import Products from "./products.jsx";
 import "./shop.css";
 
-function Shop() {
+function Shop({cartcount,warning}) {
   const [data, setdata] = useState(Products);
   // //////category
   const categoryfilter = (item) => {
@@ -13,7 +13,7 @@ function Shop() {
   };
   // ////// sort
   const Sortprice = () => {
-    const result = [...Products].sort((a, b) => a.price - b.price);
+    const result = [...data].sort((a, b) => a.price - b.price);
     setdata(result);
   };
 
@@ -31,6 +31,7 @@ function Shop() {
         <button onClick={() => setdata(Products)}>All</button>
       </div>
       <div className="books col-md-9">
+        {warning && <div className="warning">This product is already in your cart</div>}
         <div className="row">
           {data.map((values) => {
             const { id, title, price, image } = values;
@@ -46,7 +47,7 @@ function Shop() {
                         Some quick example text to build on the card title and
                         make up the bulk of the card's content.
                       </p>
-                      <button className="btn btn-primary">Buy</button>
+                      <button className="btn btn-primary" onClick={()=>cartcount(values)}>Add To Cart</button>
                     </div>
                   </div>
                 </div>

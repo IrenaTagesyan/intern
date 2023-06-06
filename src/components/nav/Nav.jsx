@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa"
 import "./nav.css";
 
-function Nav() {
+function Nav({size}) {
   return (
     <div className="navbar">
       <ul>
         <li>
-          <NavLink className="link" to="/" activeClassName="active">
+          <NavLink className="link" to="/" >
             {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
@@ -18,7 +19,7 @@ function Nav() {
         </li>
 
         <li>
-          <NavLink className="link" to="/shop" activeClassName="active">
+          <NavLink className="link" to="/shop" >
             
 {({ isActive, isPending }) => (
               <span
@@ -31,7 +32,7 @@ function Nav() {
         </li>
 
         <li>
-          <NavLink className="link" to="/aboutus" activeClassName="active">
+          <NavLink className="link" to="/aboutus">
             
             {({ isActive, isPending }) => (
               <span
@@ -43,12 +44,24 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink className="link" to="/contact" activeClassName="active">
+          <NavLink className="link" to="/contact" >
             {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
             Contact us
+              </span>
+            )}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="link" to="/cart" >
+            {({ isActive, isPending }) => (
+              <span
+                className={isPending ? "pending" : isActive ? "active" : ""}
+              >
+            <FaShoppingCart className="cart_btn"/>
+            <span className="count_span" >{size}</span>
               </span>
             )}
           </NavLink>

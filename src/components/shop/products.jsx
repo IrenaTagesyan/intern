@@ -21,6 +21,7 @@ const Products = [
     price: 20,
     image: `${fantast1}`,
     category: "fantasy",
+    product_count: 1,
   },
 
   {
@@ -29,6 +30,7 @@ const Products = [
     price: 60,
     image: `${fantast2}`,
     category: "fantasy",
+    product_count: 1,
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const Products = [
     price: 10,
     image: `${fantast3}`,
     category: "fantasy",
+    product_count: 1,
   },
 
   {
@@ -44,6 +47,7 @@ const Products = [
     price: 30,
     image: `${mystery1}`,
     category: "mystery",
+    product_count: 1,
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ const Products = [
     price: 50,
     image: `${mystery2}`,
     category: "mystery",
+    product_count: 1,
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ const Products = [
     price: 24,
     image: `${mystery3}`,
     category: "mystery",
+    product_count: 1,
   },
 
   {
@@ -66,6 +72,7 @@ const Products = [
     price: 55,
     image: `${thriller1}`,
     category: "thriller",
+    product_count: 1,
   },
   {
     id: 8,
@@ -73,6 +80,7 @@ const Products = [
     price: 90,
     image: `${thriller2}`,
     category: "thriller",
+    product_count: 1,
   },
   {
     id: 9,
@@ -80,6 +88,7 @@ const Products = [
     price: 77,
     image: `${thriller3}`,
     category: "thriller",
+    product_count: 1,
   },
 
   {
@@ -88,6 +97,7 @@ const Products = [
     price: 85,
     image: `${romance1}`,
     category: "romance",
+    product_count: 1,
   },
   {
     id: 11,
@@ -95,6 +105,7 @@ const Products = [
     price: 70,
     image: `${romance2}`,
     category: "romance",
+    product_count: 1,
   },
   {
     id: 12,
@@ -102,6 +113,7 @@ const Products = [
     price: 15,
     image: `${romance3}`,
     category: "romance",
+    product_count: 1,
   },
 
   {
@@ -110,6 +122,7 @@ const Products = [
     price: 40,
     image: `${western1}`,
     category: "western",
+    product_count: 1,
   },
   {
     id: 14,
@@ -117,6 +130,7 @@ const Products = [
     price: 35,
     image: `${western2}`,
     category: "western",
+    product_count: 1,
   },
   {
     id: 15,
@@ -124,6 +138,7 @@ const Products = [
     price: 66,
     image: `${western3}`,
     category: "western",
+    product_count: 1,
   },
 ];
 export default Products;

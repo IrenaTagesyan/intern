@@ -48,3 +48,12 @@
 .row {
   justify-content: space-around;
 }
+.warning{
+    position: relative;
+    left: 25%;
+    background-color: rgb(183, 50, 50);
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}

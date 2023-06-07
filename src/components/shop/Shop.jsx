@@ -36,7 +36,7 @@ function Shop({cartcount,warning}) {
           {data.map((values) => {
             const { id, title, price, image } = values;
             return (
-              <>
+              
                 <div className="col-md-3" key={id}>
                   <div className="card">
                     <img src={image} className="card-img-top" alt="..." />
@@ -51,7 +51,7 @@ function Shop({cartcount,warning}) {
                     </div>
                   </div>
                 </div>
-              </>
+              
             );
           })}
         </div>

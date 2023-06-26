@@ -4,7 +4,7 @@ import city from "./svg/city.svg";
 import globus from "./svg/globus.svg";
 import "./about.css";
 
-function Aboutus() {
+function aboutUs() {
   return (
     <div className="about_div">
       <div className="main">
@@ -69,4 +69,4 @@ function Aboutus() {
     </div>
   );
 }
-export default Aboutus;
+export default aboutUs;

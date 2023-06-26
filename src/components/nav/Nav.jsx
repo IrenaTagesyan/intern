@@ -1,31 +1,30 @@
 import { NavLink } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa"
+import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
 
-function Nav({size}) {
+function nav({ size }) {
   return (
     <div className="navbar">
       <ul>
         <li>
-          <NavLink className="link" to="/" >
+          <NavLink className="link" to="/">
             {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
-            Home
+                Home
               </span>
             )}
           </NavLink>
         </li>
 
         <li>
-          <NavLink className="link" to="/shop" >
-            
-{({ isActive, isPending }) => (
+          <NavLink className="link" to="/shop">
+            {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
-            Shop
+                Shop
               </span>
             )}
           </NavLink>
@@ -33,35 +32,34 @@ function Nav({size}) {
 
         <li>
           <NavLink className="link" to="/aboutus">
-            
             {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
-            About us
+                About us
               </span>
             )}
           </NavLink>
         </li>
         <li>
-          <NavLink className="link" to="/contact" >
+          <NavLink className="link" to="/contact">
             {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
-            Contact us
+                Contact us
               </span>
             )}
           </NavLink>
         </li>
         <li>
-          <NavLink className="link" to="/cart" >
+          <NavLink className="link" to="/cart">
             {({ isActive, isPending }) => (
               <span
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
-            <FaShoppingCart className="cart_btn"/>
-            <span className="count_span" >{size}</span>
+                <FaShoppingCart className="cart_btn" />
+                <span className="count_span">{size}</span>
               </span>
             )}
           </NavLink>
@@ -70,4 +68,4 @@ function Nav({size}) {
     </div>
   );
 }
-export default Nav;
+export default nav;

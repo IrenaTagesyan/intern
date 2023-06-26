@@ -3,7 +3,7 @@ import mail from "./svg/mail.svg";
 import call from "./svg/call.svg";
 import "./contact.css";
 
-function Contact(params) {
+function contact(params) {
   return (
     <div className="map_div">
       <iframe
@@ -73,4 +73,4 @@ function Contact(params) {
     </div>
   );
 }
-export default Contact;
+export default contact;

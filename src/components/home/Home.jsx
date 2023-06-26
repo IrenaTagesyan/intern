@@ -3,7 +3,7 @@ import ImageSlider from "./ImageSlider";
 import { SliderData } from "./SliderData";
 import { Link } from "react-router-dom";
 
-function Home() {
+function home() {
   return (
     <div>
       <ImageSlider slides={SliderData} />
@@ -37,4 +37,4 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default home;

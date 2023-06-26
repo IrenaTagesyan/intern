@@ -1,24 +1,24 @@
 import "./cart.css";
 import { useEffect, useState } from "react";
 
-function Cart({ cart, setcart, count }) {
-  const [totalprice, settotalprice] = useState(0);
+function cart({ cart, setcart, count }) {
+  const [totalprice, setTotalprice] = useState(0);
   // ///// Total Price
-  const Totalprice = () => {
-    let totalprice = 0;
+  const totalPrice = () => {
+    let newPrice = 0;
     cart.map((item) => {
-      totalprice += item.price;
+      newPrice += item.price * item.product_count;
     });
-    settotalprice(totalprice);
+    setTotalprice(newPrice);
   };
   useEffect(() => {
-    Totalprice();
+    totalPrice();
   });
   // ///// Remove
-  const Remove = (id) => {
+  const remove = (id) => {
     const arr = cart.filter((item) => item.id !== id);
     setcart(arr);
-    Totalprice();
+    totalPrice();
   };
 
   ///////
@@ -56,7 +56,7 @@ function Cart({ cart, setcart, count }) {
                 </div>
                 <div className="pr">
                   <p className="price_cart">Price:${price}</p>
-                  <button className="remove_btn" onClick={() => Remove(id)}>
+                  <button className="remove_btn" onClick={() => remove(id)}>
                     Remove
                   </button>
                 </div>
@@ -69,4 +69,4 @@ function Cart({ cart, setcart, count }) {
     </div>
   );
 }
-export default Cart;
+export default cart;

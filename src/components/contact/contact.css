@@ -76,19 +76,19 @@ h1 {
 }
 
 .phone::before {
-  content: url("./svg/phone.svg");
+  content: url("../images/phone.svg");
   margin: 5px;
 }
 .message::before {
-  content: url("./svg/message.svg");
+  content: url("../images/message.svg");
   margin: 5px;
 }
 .email::before {
-  content: url("./svg/mail_input.svg");
+  content: url("../images/mail_input.svg");
   margin: 5px;
 }
 .name::before {
-  content: url("./svg/user.svg");
+  content: url("../images/user.svg");
   margin: 5px;
 }
 #name,

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
 
-function nav({ size }) {
+function Nav({ size }) {
   return (
     <div className="navbar">
       <ul>
@@ -59,7 +59,7 @@ function nav({ size }) {
                 className={isPending ? "pending" : isActive ? "active" : ""}
               >
                 <FaShoppingCart className="cart_btn" />
-                <span className="count_span">{size}</span>
+                <span className="cart_count">{size}</span>
               </span>
             )}
           </NavLink>
@@ -68,4 +68,4 @@ function nav({ size }) {
     </div>
   );
 }
-export default nav;
+export default Nav;

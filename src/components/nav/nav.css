@@ -41,7 +41,7 @@ a.active {
   height: 25px;
   width: 25px;
 }
-.count_span {
+.cart_count {
   position: relative;
   right: 10px;
   bottom: 10px;

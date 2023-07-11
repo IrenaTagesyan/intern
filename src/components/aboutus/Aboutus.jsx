@@ -1,12 +1,9 @@
-import shop from "./svg/shop.svg";
-import icon from "./svg/icon.svg";
-import city from "./svg/city.svg";
-import globus from "./svg/globus.svg";
+import Info from "./info";
 import "./about.css";
 
-function aboutUs() {
-  return (
-    <div className="about_div">
+function AboutUs() {
+    return(
+        <div className="about_div">
       <div className="main">
         <p className="main_p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex maiores
@@ -29,44 +26,27 @@ function aboutUs() {
         </p>
       </div>
       <div className="container">
-        <div className="con_div">
-          <div className="con_main">
-            <img src={icon} alt="shop" />
+        {Info.map((values)=>{
+const {image,paragraf,number,id}=values
+return (
+        <div className="con_div" key={id}>
+    <div className="con_main">
+            <img src={image} alt="shop" />
             <div>
-              <p>Total Gueste</p>
-              <p>200,000,000+</p>
+              <p>{paragraf}</p>
+              <p>{number}</p>
             </div>
-          </div>
-        </div>
-        <div className="con_div">
-          <div className="con_main">
-            <img src={city} alt="shop" />
-            <div>
-              <p>Cities</p>
-              <p>65,000+</p>
-            </div>
-          </div>
-        </div>
-        <div className="con_div">
-          <div className="con_main">
-            <img src={shop} alt="shop" />
-            <div>
-              <p>Shops</p>
-              <p>1,400+</p>
-            </div>
-          </div>
-        </div>
-        <div className="con_div">
-          <div className="con_main">
-            <img src={globus} alt="shop" />
-            <div>
-              <p>Countries</p>
-              <p>191+</p>
-            </div>
-          </div>
-        </div>
-      </div>
+          </div>   
+      </div> ) })}
     </div>
-  );
+    </div>
+    )
 }
-export default aboutUs;
+    
+  
+
+
+
+
+
+export default AboutUs;

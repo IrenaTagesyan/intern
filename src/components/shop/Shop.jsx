@@ -1,9 +1,13 @@
 import { useState } from "react";
 import Products from "./products.jsx";
 import "./shop.css";
+import ProductContext from "../CreateContext.js";
+import { useContext } from "react";
 
-function shop({ cartcount, warning }) {
+function Shop({}) {
   const [data, setData] = useState(Products);
+  const product=useContext(ProductContext)
+  console.log(product)
   // //////category
   const categoryFilter = (item) => {
     const result = Products.filter((obj) => {
@@ -14,9 +18,27 @@ function shop({ cartcount, warning }) {
   // ////// sort
   const sortPrice = () => {
     const result = [...data].sort((a, b) => a.price - b.price);
-    setdata(result);
+    setData(result);
   };
 
+//   /// cartcount
+  function cartCount(item) {
+    let isPresent = false;
+    product.cart.forEach((product) => {
+      if (item.id === product.id) {
+        isPresent = true;
+        return;
+      }
+    });
+    if (isPresent) {
+      product.setWarning(true);
+      setTimeout(() => {
+        product.setWarning(false);
+      }, 2000);
+      return;
+    }
+    product.setCart([...product.cart, item]);
+  }
   return (
     <div className="shop_main">
       <div className="btns">
@@ -31,7 +53,7 @@ function shop({ cartcount, warning }) {
         <button onClick={() => setData(Products)}>All</button>
       </div>
       <div className="books col-md-9">
-        {warning && (
+        {product.warning && (
           <div className="warning">This product is already in your cart</div>
         )}
         <div className="row">
@@ -50,7 +72,7 @@ function shop({ cartcount, warning }) {
                     </p>
                     <button
                       className="btn btn-primary"
-                      onClick={() => cartcount(values)}
+                      onClick={() => cartCount(values)}
                     >
                       Add To Cart
                     </button>
@@ -64,4 +86,4 @@ function shop({ cartcount, warning }) {
     </div>
   );
 }
-export default shop;
+export default Shop;

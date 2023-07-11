@@ -1,9 +1,9 @@
-import home from "./svg/home.svg";
-import mail from "./svg/mail.svg";
-import call from "./svg/call.svg";
+import home from "../images/home.svg";
+import mail from "../images/mail.svg";
+import call from "../images/call.svg";
 import "./contact.css";
 
-function contact(params) {
+function Contact(params) {
   return (
     <div className="map_div">
       <iframe
@@ -73,4 +73,4 @@ function contact(params) {
     </div>
   );
 }
-export default contact;
+export default Contact;

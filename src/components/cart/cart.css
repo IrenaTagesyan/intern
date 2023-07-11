@@ -14,7 +14,7 @@
 }
 .minus_btn,
 .plus_btn,
-.remove_btn {
+.remove_btn,.buy {
   background-color: #1b3764;
   color: white;
   font-weight: bold;
@@ -40,4 +40,31 @@
 .price_cart {
   font-size: 23px;
   font-weight: bold;
+}
+
+.popup{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(27, 55, 100,0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.3s;
+}
+.popup.active{
+    transform: scale(1);
+}
+.popup_content{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
